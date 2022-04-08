@@ -1,12 +1,33 @@
 <section class="orders-show">
 
   <header class="page-header">
-    <h1>Order #<%= @order.id %></h1>
+    <h1>Order <%= @order.id %></h1>
   </header>
 
   <div class="order-summary jumbotron">
-    <h4>Thank you for your order!</h4>
+    <h4>Thank you for your order! <%= @order.email %></h4>
   </div>
+  <h4>Your Order Summary</h4>
+  <div class="panel panel-default items">
+  <table class="table table-bordered">
+    <thead>
+      <tr>
+        <th colspan="2">Product</th>
+        <th>Quantity</th>
+        <th>Price</th>
+      </tr>
+    </thead>
+    <tbody>
+        <%= render 'order', order_item: @order_items %>
+    </tbody>
+    <tfoot>
+        <th colspan="4">
+          TOTAL:
+          <%= humanized_money_with_symbol @order.total %>
+        </th>
+    </tfoot>
+  </table>
+</div>
 
   <%= link_to "Continue Shopping", root_path, class: 'btn btn-lg btn-primary' %>
 

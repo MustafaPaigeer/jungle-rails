@@ -33,10 +33,10 @@ More information in their docs: <https://stripe.com/docs/testing#cards>
 * Stripe
 * jquery-rails
 * turbolinks
-* jbuilder', '~> 2.0
-* bcrypt', '~> 3.1.7
+* jbuilder
+* bcrypt
 * puma
-* bootstrap-sass', '~> 3.3.6
+* bootstrap-sass
 * font-awesome-rails
 * money-rails
 * carrierwave
